@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[90rem] p-6 w-full mx-auto;
+}
+
+@layer components{
+/* ----------------------------Header------------------------ */
+.header{
+    @apply bg-light relative
+}
+.header__desk{
+    @apply md:flex items-center 
+}
+.header__desk ul{
+    @apply hidden md:flex md:gap-10
+}
+.header__desk ul li a{
+    @apply text-dark
+}
+.header__mobile{
+    @apply bg-light absolute top-[5rem] left-0 w-0 h-[90vh] px-0 pt-0 overflow-hidden shadow-sm transition-all
+    md:static md:h-fit md:w-fit md:shadow-none
+}
+.header__mobile.open{
+    @apply w-[100%]   transition-all
+}
+.header__mobile ul{
+    @apply  pb-5 flex flex-col md:hidden text-center 
+}
+.header__mobile ul li{
+    @apply hover:bg-primary hover:text-light border-b-[1px] py-[1rem]
+}
+.header__mobile ul li a{
+    @apply font-thin 
+}
+.header__mobile ul li:first-child{
+    @apply border-t-[1px]
+}
+.toggle__menu{
+    @apply md:hidden
+}
+.toggle__menu span{
+    @apply w-[2.1rem] h-[.3rem] bg-primary block rounded-full transition-all 
+}
+.toggle__menu span:nth-child(2){
+    @apply my-1
+}
+.header__wrapper{
+    @apply flex items-center justify-between
+}
+.toggle__menu.open span:first-child{
+    @apply transform translate-y-[11px] rotate-[225deg] transition-all
+}
+.toggle__menu.open span:nth-child(2){
+    @apply opacity-0 transition-all
+}
+.toggle__menu.open span:last-child{
+    @apply transform translate-y-[-7px] rotate-[-225deg] transition-all
+}
+
+/* --------------------Banner------------------ */
+.banner{
+    @apply lg:my-[5rem]
+}
+.banner__left h1{
+    @apply mb-7
+}
+.banner__left p{
+    @apply mb-7
+}
+/* --------------------About Home---------------- */
+.aboutHome h2:first-child{
+    @apply font-bold 
+}
+.aboutHome{
+    @apply text-center my-[5rem]
+}
+.aboutHome p{
+    @apply my-7   
+}
+/* -------------------Services----------------- */
+.services{
+    @apply bg-aboutHome bg-center my-[5rem] text-light
+}
+.services__cards h2{
+    @apply text-center my-10
+}
+.services__img img{
+    @apply w-[4rem] mx-auto
+}
+.services__img h3{
+    @apply text-center
+}
+.services__img{
+    @apply my-10
+}
+.services__info ul li i{
+    @apply text-[.3rem] w-3
+}
+.services__info{
+    @apply py-5
+}
+/* ----------------------------Testimonial---------------- */
+.testimonial__wrapper{
+    @apply relative 
+}
+.testimonial__title h2{
+    @apply text-center w-full mb-[3rem]
+}
+.testimonial__info{
+    @apply text-center relative
+}
+.testimonial__info .clients img{
+    @apply mx-auto
+}
+.clients img{
+    @apply rounded-[100%] w-[80%] lg:w-[25%]
+}
+.clients h3{
+    @apply font-bold mt-[1rem]
+}
+.clients p{
+    @apply mb-[1rem] z-50 
+}
+.clients small{
+    @apply font-bold text-[1rem]
+}
+.quote p{
+    @apply my-[4rem] font-semibold h-[100%]
+}
+.quote i{
+    @apply absolute text-gray-200 text-[7rem] lg:text-[10rem] z-[-99]
+}
+.quote{
+    @apply w-[90%] mx-auto 
+}
+.quote i:first-child{
+    @apply left-0 top-0 mt-[120%]
+}
+.quote i:nth-child(2){
+    @apply  right-0 ml-[50%]
+}
+
+
+
+/* -----------------------Events------------------------ */
+.events{
+    @apply my-[5rem] text-center
+}
+.events__wrapper h2{
+    @apply mb-[2rem]
+}
+.events__cards{
+    @apply p-[1.5rem]
+}
+.events__info{
+    @apply shadow-2xl mb-[3rem] overflow-hidden
+}
+.events__content{
+    @apply p-[2rem] 
+}
+.events__content p{
+    @apply my-[1.5rem]
+}
+.events__content h3{
+    @apply font-semibold
+}
+.events__img img{
+    @apply w-full transition-transform duration-300 hover:scale-[1.2]
+}
+
+/* ------------------------Footer----------------------- */
+.footer{
+    @apply bg-primary text-center text-light
+}
+.footer__socials img{
+    @apply mx-auto 
+}
+
+
+}
+
+
+.tns-nav{
+    @apply
+    z-[10] flex justify-center items-center
+}
+.tns-nav button{
+    @apply   
+    m-[.5rem]
+    w-[15px]
+    h-[15px]
+    rounded-[100%]
+    border-none
+    bg-primary
+    }
+.tns-nav button.tns-nav-active{
+    @apply bg-pink-600
+}
+
+@layer base {
+    @font-face {
+      font-family: 'Montserrat',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    }
+    h1 {
+        @apply text-4xl;
+      }
+      h2 {
+        @apply text-3xl;
+      }
+      h3 {
+        @apply text-xl;
+      }
+      p{
+        @apply text-[1.1rem] font-thin
+      }
+      a {
+        @apply text-[1rem] font-semibold text-center;
+      }
+
+      
+  }
+
+@layer utilities{
+    .btn{
+        @apply inline-block py-[.8rem] px-[1.5rem] rounded-full border-transparent border-[1px]
+        hover:scale-[1]
+    }
+    .btn.bg--primary{
+        @apply text-light hover:bg-transparent hover:text-primary hover:border-primary bg-primary
+        transition-all duration-500
+    }
+    .btn.bg--transparent{
+        @apply text-dark border-primary hover:border-transparent hover:bg-gray-300 hover:scale-95
+        transition-all duration-500
+    }
+
+
+    
+    
+    
+}
