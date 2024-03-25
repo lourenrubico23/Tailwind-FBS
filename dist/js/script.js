@@ -6,4 +6,5 @@ burger.addEventListener("click", () =>{
     headerA.classList.toggle("open");
 })
 
-/* Slider */
+
+

@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage:{
         homeBanner: "url(../dist/img/home/sprite.svg)",
         aboutHome: "url(../dist/img/home/services.jpg)",
+        Banner: "url(../dist/img/home/bg3.svg)",
       },
       colors:{
         primary: "#6a103f",

@@ -3,26 +3,34 @@
 @tailwind utilities;
 
 .container{
-    @apply max-w-[90rem] p-6 w-full mx-auto;
+    @apply max-w-[80rem] p-6 w-full mx-auto;
 }
 
 @layer components{
 /* ----------------------------Header------------------------ */
 .header{
-    @apply bg-light relative
+    @apply bg-light relative h-[6rem]
 }
 .header__desk{
-    @apply md:flex items-center 
+    @apply lg:flex items-center lg:justify-between lg:w-full 
 }
 .header__desk ul{
-    @apply hidden md:flex md:gap-10
+    @apply hidden lg:flex 
 }
 .header__desk ul li a{
-    @apply text-dark
+    @apply text-primary font-thin lg:relative lg:px-[1rem]
 }
+.header__desk ul li a::after{
+    @apply content-[''] h-[4px] w-full scale-x-0 bg-primary block absolute left-0 bottom-[-20px] 
+    transition-all duration-300 origin-center
+}
+.header__desk ul li a:hover::after{
+    @apply  scale-x-100
+}
+
 .header__mobile{
     @apply bg-light absolute top-[5rem] left-0 w-0 h-[90vh] px-0 pt-0 overflow-hidden shadow-sm transition-all
-    md:static md:h-fit md:w-fit md:shadow-none
+    lg:static lg:h-fit lg:w-fit lg:shadow-none z-[1]
 }
 .header__mobile.open{
     @apply w-[100%]   transition-all
@@ -31,7 +39,7 @@
     @apply  pb-5 flex flex-col md:hidden text-center 
 }
 .header__mobile ul li{
-    @apply hover:bg-primary hover:text-light border-b-[1px] py-[1rem]
+    @apply  text-primary hover:bg-primary hover:text-light border-b-[1px] py-[1rem]
 }
 .header__mobile ul li a{
     @apply font-thin 
@@ -63,7 +71,13 @@
 
 /* --------------------Banner------------------ */
 .banner{
-    @apply lg:my-[5rem]
+    @apply bg-gray-100 
+}
+.banner__wrapper{
+    @apply lg:grid lg:grid-cols-2 lg:my-[7rem] lg:gap-20
+}
+.banner__left{
+    @apply lg:mt-[5rem]
 }
 .banner__left h1{
     @apply mb-7
@@ -76,30 +90,40 @@
     @apply font-bold 
 }
 .aboutHome{
+    @apply  text-dark
+}
+.aboutHome{
     @apply text-center my-[5rem]
 }
 .aboutHome p{
-    @apply my-7   
+    @apply my-7 lg:w-[75%] lg:mx-auto
 }
 /* -------------------Services----------------- */
 .services{
-    @apply bg-aboutHome bg-center my-[5rem] text-light
+    @apply bg-aboutHome bg-no-repeat lg:bg-cover bg-center lg:py-[5rem] my-[5rem] text-light
 }
-.services__cards h2{
-    @apply text-center my-10
+.services__wrapper h2{
+    @apply text-center my-10 lg:my-[2rem]
+}
+.services__cards{
+    @apply lg:grid lg:grid-cols-4 lg:gap-[3rem] lg:my-[5rem]
 }
 .services__img img{
-    @apply w-[4rem] mx-auto
+    @apply mx-auto
 }
 .services__img h3{
     @apply text-center
 }
 .services__img{
-    @apply my-10
+    @apply mb-[2rem]
 }
 .services__info ul li i{
-    @apply text-[.3rem] w-3
+    @apply text-[.3rem] w-3 
 }
+.services__info ul li{
+    @apply text-[1.1rem] lg:my-[.7rem]
+}
+
 .services__info{
     @apply py-5
 }
@@ -108,22 +132,22 @@
     @apply relative 
 }
 .testimonial__title h2{
-    @apply text-center w-full mb-[3rem]
+    @apply text-center w-full mb-[3rem] text-dark
 }
 .testimonial__info{
-    @apply text-center relative
+    @apply text-center relative lg:grid lg:grid-cols-2
 }
 .testimonial__info .clients img{
     @apply mx-auto
 }
 .clients img{
-    @apply rounded-[100%] w-[80%] lg:w-[25%]
+    @apply rounded-[100%] w-[80%] lg:w-[50%]
 }
 .clients h3{
     @apply font-bold mt-[1rem]
 }
 .clients p{
-    @apply mb-[1rem] z-50 
+    @apply mb-[1rem] z-50 text-dark
 }
 .clients small{
     @apply font-bold text-[1rem]
@@ -138,7 +162,7 @@
     @apply w-[90%] mx-auto 
 }
 .quote i:first-child{
-    @apply left-0 top-0 mt-[120%]
+    @apply left-0 top-0 lg:mt-0 
 }
 .quote i:nth-child(2){
     @apply  right-0 ml-[50%]
@@ -148,22 +172,19 @@
 
 /* -----------------------Events------------------------ */
 .events{
-    @apply my-[5rem] text-center
+    @apply my-[5rem] text-center text-dark
 }
 .events__wrapper h2{
     @apply mb-[2rem]
 }
 .events__cards{
-    @apply p-[1.5rem]
+    @apply p-[1.5rem] lg:grid lg:grid-cols-3 lg:gap-[2rem]
 }
 .events__info{
     @apply shadow-2xl mb-[3rem] overflow-hidden
 }
 .events__content{
     @apply p-[2rem] 
-}
-.events__content p{
-    @apply my-[1.5rem]
 }
 .events__content h3{
     @apply font-semibold
@@ -176,9 +197,152 @@
 .footer{
     @apply bg-primary text-center text-light
 }
+.footer__wrapper{
+    @apply lg:grid lg:grid-cols-3 
+}
+.footer__socials{
+    @apply lg:my-[2rem] lg:border-r-[1px] lg:border-light 
+}
 .footer__socials img{
     @apply mx-auto 
 }
+.footer__socials .brand{
+    @apply my-[1.5rem] lg:my-0
+}
+.icons{
+    @apply flex gap-[1.5rem]  justify-center lg:mt-[2rem]
+}
+.icons i{
+    @apply text-[1.5rem]
+}
+.footer__services{
+    @apply my-[3rem] lg:my-[2rem] lg:border-r-[1px] lg:border-light
+}
+.footer__services h5{
+    @apply font-semibold mb-[1.5rem]
+}
+.footer__services h6{
+    @apply my-[.5rem]
+}
+.footer__contact{
+    @apply my-[3rem] lg:text-left lg:my-[2rem] lg:ml-[1rem]
+}
+.footer__contact h5{
+    @apply font-semibold mb-[1.5rem]
+}
+.footer__contact h6{
+    @apply my-[.5rem]
+}
+.footer__contact h6 i{
+    @apply text-[1rem] mr-[.5rem]
+}
+
+
+/* ----------------------------------------ABOUT PAGE---------------------- */
+/* --------------------------Vision and Mission------------------- */
+.vision{
+    @apply my-[5rem]
+}
+.vision__wrapper{
+    @apply  text-center text-dark lg:text-left
+}
+.vision__wrapper h2{
+    @apply lg:text-center mb-[5rem]
+}
+.vision__content h3{
+    @apply font-bold my-[1rem]
+}
+.vision__cards{
+    @apply lg:grid lg:grid-cols-3 lg:gap-[3rem]
+}
+
+
+/* --------------------------Our Team-------------------- */
+.team{
+    @apply bg-gray-100 text-dark
+}
+.team__title {
+    @apply text-center py-[2rem] mb-[10rem] lg:mb-[25rem] lg:my-[5rem]
+}
+.team__title h2{
+    @apply mb-[2rem] 
+}
+.team__img img{
+    @apply w-[40%] lg:w-full block grayscale-[100%] transition-all max-w-[inherit] 
+}
+.team__img{
+    @apply relative right-[1rem] top-[1.5rem] 
+}
+.name{
+    @apply opacity-0  text-center mb-[1rem]
+}
+.name h5{
+    @apply font-bold
+}
+.jhonny{
+    @apply absolute bottom-0 left-[.1rem] lg:left-[5rem] z-[2] 
+}
+.jeffrey{
+    @apply absolute bottom-0 left-[3rem] lg:left-[9rem] z-[1]
+}
+.rhoda{
+    @apply absolute bottom-0 left-[8rem] lg:left-[22rem] z-[2]
+}
+.bhea{
+    @apply absolute bottom-0 w-[60%] lg:w-fit left-[11rem] lg:left-[28rem] z-[3]
+}
+.patrick{
+    @apply absolute bottom-0 w-[60%] lg:w-fit left-[15rem] lg:left-[37rem] z-[2]
+}
+.ralph{
+    @apply absolute bottom-0 w-[55%] lg:w-fit left-[18rem] lg:left-[47rem] z-[1]
+}
+.michael{
+    @apply absolute bottom-0 w-[60%] lg:w-fit left-[20rem] lg:left-[55rem] z-[2]
+}
+
+.team__img img:hover{
+    @apply lg:grayscale-0 transition-all duration-300
+}
+
+.jhonny:hover .name{
+    @apply block lg:opacity-100 transition-all duration-300 
+}
+.jeffrey:hover .name{
+    @apply block lg:opacity-100
+}
+.rhoda:hover .name{
+    @apply block lg:opacity-100
+}
+.bhea:hover .name{
+    @apply block lg:opacity-100
+}
+.patrick:hover .name{
+    @apply block lg:opacity-100
+}
+.ralph:hover .name{
+    @apply block lg:opacity-100
+}
+.michael:hover .name{
+    @apply block lg:opacity-100
+}
+
+/* --------------------Partners------------------- */
+.partners{
+    @apply my-[5rem]
+}
+.partners__clients{
+    @apply lg:grid lg:grid-cols-3
+}
+.partners__wrapper h2{
+    @apply text-center mb-[2rem] lg:mb-[5rem]
+}
+.partners__clients img{
+    @apply mx-auto py-[2rem]
+}
+
+
+
 
 
 }
@@ -210,13 +374,16 @@
       src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     }
     h1 {
-        @apply text-4xl;
+        @apply text-4xl text-dark;
       }
       h2 {
-        @apply text-3xl;
+        @apply text-3xl ;
       }
       h3 {
-        @apply text-xl;
+        @apply text-xl ;
+      }
+      h6{
+        @apply text-[.8rem]
       }
       p{
         @apply text-[1.1rem] font-thin
@@ -235,11 +402,15 @@
     }
     .btn.bg--primary{
         @apply text-light hover:bg-transparent hover:text-primary hover:border-primary bg-primary
-        transition-all duration-500
+        transition-all duration-300
     }
     .btn.bg--transparent{
         @apply text-dark border-primary hover:border-transparent hover:bg-gray-300 hover:scale-95
-        transition-all duration-500
+        transition-all duration-300
+    }
+    .btn.bg--light{
+        @apply text-light border-light hover:text-primary hover:border-transparent hover:bg-light hover:scale-95
+        transition-all duration-300
     }
 
 
