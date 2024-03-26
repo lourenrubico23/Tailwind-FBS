@@ -80,7 +80,7 @@
     @apply bg-gray-100 overflow-hidden
 }
 .container img{
-    @apply lg:bottom-[20rem] bottom-[34rem]
+    @apply top-0 right-0
 }
 .banner__wrapper{
     @apply lg:grid lg:grid-cols-2 lg:my-[7rem] lg:gap-20
@@ -262,7 +262,7 @@
     @apply font-bold my-[1rem]
 }
 .vision__cards{
-    @apply lg:grid lg:grid-cols-3 lg:gap-[3rem]
+    @apply lg:grid lg:grid-cols-3 lg:gap-[3rem] overflow-hidden
 }
 
 
@@ -289,25 +289,25 @@
     @apply font-bold
 }
 .jhonny{
-    @apply absolute bottom-0 left-[.1rem] lg:left-[5rem] z-[2] 
+    @apply absolute bottom-0 left-[.1rem] lg:left-[9rem] z-[2] 
 }
 .jeffrey{
-    @apply absolute bottom-0 left-[3rem] lg:left-[9rem] z-[1]
+    @apply absolute bottom-0 left-[3rem] lg:left-[15rem] z-[1]
 }
 .rhoda{
-    @apply absolute bottom-0 left-[8rem] lg:left-[22rem] z-[2]
+    @apply absolute bottom-0 left-[8rem] lg:left-[26rem] z-[2]
 }
 .bhea{
-    @apply absolute bottom-0 w-[60%] lg:w-fit left-[11rem] lg:left-[28rem] z-[3]
+    @apply absolute bottom-0 w-[60%] lg:w-fit left-[11rem] lg:left-[32rem] z-[3]
 }
 .patrick{
-    @apply absolute bottom-0 w-[60%] lg:w-fit left-[15rem] lg:left-[37rem] z-[2]
+    @apply absolute bottom-0 w-[60%] lg:w-fit left-[15rem] lg:left-[41rem] z-[2]
 }
 .ralph{
-    @apply absolute bottom-0 w-[55%] lg:w-fit left-[18rem] lg:left-[47rem] z-[1]
+    @apply absolute bottom-0 w-[55%] lg:w-fit left-[18rem] lg:left-[50rem] z-[1]
 }
 .michael{
-    @apply absolute bottom-0 w-[60%] lg:w-fit left-[20rem] lg:left-[55rem] z-[2] overflow-hidden
+    @apply absolute bottom-0 w-[60%] lg:w-fit left-[20rem] lg:left-[58rem] z-[2]
 }
 
 .team__img img:hover{

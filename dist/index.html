@@ -53,7 +53,7 @@
     <!-- BANNER STARTS -->
     <section class="banner relative bg-no-repeat bg-right-top">
         <div class="container">
-            <img class="absolute animate-transition w-full h-full lg:w-[120%] lg:h-[120%]" src="./img/home/bg3.svg" alt="">
+            <img class="absolute animate-transition" src="./img/home/bg3.svg" alt="">
             <div class="banner__wrapper ">
                 <div class="banner__left" data-aos="fade-up"
                 data-aos-duration="1000">
@@ -368,39 +368,13 @@
     <!-- ARROW UP ENDS -->
 
 
-    
-
     <!-- Slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-   <script>
-    
-        var slider = tns({
-          container: '.testimonial__wrapper',
-          items: 1,
-          slideBy: 'page',
-          autoplay: false,
-          controls: false,
-          mouseDrag: true,
-          navPosition: "bottom"
-          
-        });
-     
-   </script> 
+   
    
    <!-- Animation -->
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
-
-        document.addEventListener('aos:in', ({ detail }) => {
-  console.log('animated in', detail);
-});
-
-document.addEventListener('aos:out', ({ detail }) => {
-  console.log('animated out', detail);
-});
-      AOS.init();
-    </script>
 
 
     <script src="./js/script.js"></script>

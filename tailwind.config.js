@@ -17,10 +17,10 @@ module.exports = {
       keyframes:{
         'transition':{
           '0%':{
-            transform: 'translateX(20%) translateY(30%)'
+            transform: 'translateY(0%)'
           },
           '100%':{
-            transform:'translateX(10%) translateY(0%) '
+            transform:'translateY(-80%) '
           }
         },
       },

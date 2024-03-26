@@ -843,14 +843,11 @@ a {
 }
 
 .container img {
-  bottom: 34rem;
+  top: 0px;
+  right: 0px;
 }
 
 @media (min-width: 1024px) {
-  .container img {
-    bottom: 20rem;
-  }
-
   .banner__wrapper {
     margin-top: 7rem;
     margin-bottom: 7rem;
@@ -1280,6 +1277,10 @@ a {
   font-weight: 700;
 }
 
+.vision__cards {
+  overflow: hidden;
+}
+
 @media (min-width: 1024px) {
   .vision__cards {
     display: grid;
@@ -1358,7 +1359,7 @@ a {
 
 @media (min-width: 1024px) {
   .jhonny {
-    left: 5rem;
+    left: 9rem;
   }
 }
 
@@ -1371,7 +1372,7 @@ a {
 
 @media (min-width: 1024px) {
   .jeffrey {
-    left: 9rem;
+    left: 15rem;
   }
 }
 
@@ -1384,7 +1385,7 @@ a {
 
 @media (min-width: 1024px) {
   .rhoda {
-    left: 22rem;
+    left: 26rem;
   }
 }
 
@@ -1398,7 +1399,7 @@ a {
 
 @media (min-width: 1024px) {
   .bhea {
-    left: 28rem;
+    left: 32rem;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1414,7 +1415,7 @@ a {
 
 @media (min-width: 1024px) {
   .patrick {
-    left: 37rem;
+    left: 41rem;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1430,7 +1431,7 @@ a {
 
 @media (min-width: 1024px) {
   .ralph {
-    left: 47rem;
+    left: 50rem;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1442,12 +1443,11 @@ a {
   left: 20rem;
   z-index: 2;
   width: 60%;
-  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
   .michael {
-    left: 55rem;
+    left: 58rem;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1683,10 +1683,6 @@ a {
   display: block;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .w-\[2\.5rem\] {
   width: 2.5rem;
 }
@@ -1703,21 +1699,17 @@ a {
   width: 60%;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .grow {
   flex-grow: 1;
 }
 
 @keyframes transition {
   0% {
-    transform: translateX(20%) translateY(30%);
+    transform: translateY(0%);
   }
 
   100% {
-    transform: translateX(10%) translateY(0%) ;
+    transform: translateY(-80%) ;
   }
 }
 
@@ -1888,14 +1880,6 @@ a {
 
   .lg\:ml-\[50\%\] {
     margin-left: 50%;
-  }
-
-  .lg\:h-\[120\%\] {
-    height: 120%;
-  }
-
-  .lg\:w-\[120\%\] {
-    width: 120%;
   }
 
   .lg\:w-\[2\.1rem\] {

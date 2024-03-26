@@ -54,7 +54,7 @@
      <!-- BANNER STARTS -->
      <section class="banner relative bg-no-repeat bg-right-top">
         <div class="container">
-            <img class="absolute animate-transition  lg:w-[120%] lg:h-[120%]" src="./img/home/bg3.svg" alt="">
+            <img class="absolute animate-transition" src="./img/home/bg3.svg" alt="">
             <div class="banner__wrapper">
                 <div class="banner__left" data-aos="fade-up"
                 data-aos-duration="1000">
@@ -308,34 +308,8 @@
 <button style="display: none;" onclick="scrollToTop()" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- ARROW UP ENDS -->
     
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    
-        var slider = tns({
-          container: '.testimonial__wrapper',
-          items: 1,
-          slideBy: 'page',
-          autoplay: false,
-          controls: false,
-          mouseDrag: true,
-          navPosition: "bottom"
-          
-        });
-     
-   </script> 
-   
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
 
-        document.addEventListener('aos:in', ({ detail }) => {
-  console.log('animated in', detail);
-});
-
-document.addEventListener('aos:out', ({ detail }) => {
-  console.log('animated out', detail);
-});
-      AOS.init();
-    </script>
     <script src="./js/script.js"></script>
     
 </body>
