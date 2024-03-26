@@ -36,13 +36,13 @@
     @apply w-[100%]   transition-all
 }
 .header__mobile ul{
-    @apply  pb-5 flex flex-col md:hidden text-center 
+    @apply  flex flex-col md:hidden text-center 
 }
 .header__mobile ul li{
     @apply  text-primary hover:bg-primary hover:text-light border-b-[1px] py-[1rem]
 }
 .header__mobile ul li a{
-    @apply font-thin 
+    @apply font-thin pb-5 px-[10rem]
 }
 .header__mobile ul li:first-child{
     @apply border-t-[1px]
@@ -270,8 +270,11 @@
 .team{
     @apply bg-gray-100 text-dark overflow-hidden
 }
+.wholeteam{
+    @apply lg:hidden 
+}
 .team__title {
-    @apply text-center py-[2rem] mb-[10rem] lg:mb-[25rem] lg:my-[5rem]
+    @apply text-center py-[2rem] mb-[5rem] lg:mb-[28rem] lg:my-[5rem]
 }
 .team__title h2{
     @apply mb-[2rem] 
@@ -280,7 +283,7 @@
     @apply w-[40%] lg:w-full block grayscale-[100%] transition-all max-w-[inherit] 
 }
 .team__img{
-    @apply relative right-[1rem] top-[1.5rem] 
+    @apply relative mx-auto top-[1.5rem] opacity-0 lg:opacity-100
 }
 .name{
     @apply opacity-0  text-center mb-[1rem] 
@@ -289,7 +292,7 @@
     @apply font-bold
 }
 .jhonny{
-    @apply absolute bottom-0 left-[.1rem] lg:left-[9rem] z-[2] 
+    @apply absolute bottom-0 left-[.1rem]  lg:left-[9rem] z-[2] 
 }
 .jeffrey{
     @apply absolute bottom-0 left-[3rem] lg:left-[15rem] z-[1]
@@ -298,10 +301,10 @@
     @apply absolute bottom-0 left-[8rem] lg:left-[26rem] z-[2]
 }
 .bhea{
-    @apply absolute bottom-0 w-[60%] lg:w-fit left-[11rem] lg:left-[32rem] z-[3]
+    @apply absolute bottom-0  lg:w-fit left-[11rem] lg:left-[32rem] z-[3]
 }
 .patrick{
-    @apply absolute bottom-0 w-[60%] lg:w-fit left-[15rem] lg:left-[41rem] z-[2]
+    @apply absolute bottom-0  lg:w-fit left-[15rem] lg:left-[41rem] z-[2]
 }
 .ralph{
     @apply absolute bottom-0 w-[55%] lg:w-fit left-[18rem] lg:left-[50rem] z-[1]
