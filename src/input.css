@@ -268,7 +268,7 @@
 
 /* --------------------------Our Team-------------------- */
 .team{
-    @apply bg-gray-100 text-dark
+    @apply bg-gray-100 text-dark overflow-hidden
 }
 .team__title {
     @apply text-center py-[2rem] mb-[10rem] lg:mb-[25rem] lg:my-[5rem]
@@ -307,7 +307,7 @@
     @apply absolute bottom-0 w-[55%] lg:w-fit left-[18rem] lg:left-[47rem] z-[1]
 }
 .michael{
-    @apply absolute bottom-0 w-[60%] lg:w-fit left-[20rem] lg:left-[55rem] z-[2]
+    @apply absolute bottom-0 w-[60%] lg:w-fit left-[20rem] lg:left-[55rem] z-[2] overflow-hidden
 }
 
 .team__img img:hover{
@@ -351,12 +351,12 @@
 }
 
 /* --------------Arrow up------------ */
-.arrow{
+.scroll-to-top{
     @apply fixed bottom-3 right-3 lg:bottom-4 lg:right-[5rem] bg-light text-primary rounded-full  
     border-[1px] border-primary hover:bg-primary hover:text-light hover:border-light transition
     duration-300
 }
-.arrow i{
+.scroll-to-top i{
     @apply text-[1.5rem] lg:text-[2rem] py-[.5rem] px-[.7rem] lg:py-[1.1rem] lg:px-[1.3rem] 
 }
 
