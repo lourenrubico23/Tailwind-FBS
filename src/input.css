@@ -9,7 +9,7 @@
 @layer components{
 /* ----------------------------Header------------------------ */
 .header{
-    @apply bg-light relative h-[6rem]
+    @apply bg-light relative h-[6rem] z-[1]
 }
 .header__desk{
     @apply lg:flex items-center lg:justify-between lg:w-full 
@@ -50,6 +50,7 @@
 .toggle__menu{
     @apply md:hidden
 }
+
 .toggle__menu span{
     @apply w-[2.1rem] h-[.3rem] bg-primary block rounded-full transition-all 
 }
@@ -59,19 +60,27 @@
 .header__wrapper{
     @apply flex items-center justify-between
 }
-.toggle__menu.open span:first-child{
-    @apply transform translate-y-[11px] rotate-[225deg] transition-all
+.toggle__menu.open .first{
+    @apply scale-x-0 transition duration-300
 }
-.toggle__menu.open span:nth-child(2){
-    @apply opacity-0 transition-all
+.toggle__menu.open .second{
+    @apply scale-x-0 transition-all duration-300 
 }
-.toggle__menu.open span:last-child{
-    @apply transform translate-y-[-7px] rotate-[-225deg] transition-all
+.toggle__menu.open .inner span:first-child{
+    @apply transform translate-y-[-4px] rotate-[45deg] transition-all duration-300
 }
+.toggle__menu.open .inner span:last-child{
+    @apply transform translate-y-[-4px] rotate-[-45deg] transition-all duration-300
+}
+
+
 
 /* --------------------Banner------------------ */
 .banner{
-    @apply bg-gray-100 
+    @apply bg-gray-100 overflow-hidden
+}
+.container img{
+    @apply lg:bottom-[20rem] bottom-[34rem]
 }
 .banner__wrapper{
     @apply lg:grid lg:grid-cols-2 lg:my-[7rem] lg:gap-20
@@ -90,7 +99,7 @@
     @apply font-bold 
 }
 .aboutHome{
-    @apply  text-dark
+    @apply  text-dark 
 }
 .aboutHome{
     @apply text-center my-[5rem]
@@ -274,7 +283,7 @@
     @apply relative right-[1rem] top-[1.5rem] 
 }
 .name{
-    @apply opacity-0  text-center mb-[1rem]
+    @apply opacity-0  text-center mb-[1rem] 
 }
 .name h5{
     @apply font-bold
@@ -306,25 +315,25 @@
 }
 
 .jhonny:hover .name{
-    @apply block lg:opacity-100 transition-all duration-300 
+    @apply block lg:opacity-100 transition-all duration-700 translate-y-[-20%]
 }
 .jeffrey:hover .name{
-    @apply block lg:opacity-100
+    @apply block lg:opacity-100 transition-all duration-700 translate-y-[-20%]
 }
 .rhoda:hover .name{
-    @apply block lg:opacity-100
+    @apply block lg:opacity-100 transition-all duration-700 translate-y-[-20%]
 }
 .bhea:hover .name{
-    @apply block lg:opacity-100
+    @apply block lg:opacity-100 transition-all duration-700 translate-y-[-20%]
 }
 .patrick:hover .name{
-    @apply block lg:opacity-100
+    @apply block lg:opacity-100 transition-all duration-700 translate-y-[-20%]
 }
 .ralph:hover .name{
-    @apply block lg:opacity-100
+    @apply block lg:opacity-100 transition-all duration-700 translate-y-[-20%]
 }
 .michael:hover .name{
-    @apply block lg:opacity-100
+    @apply block lg:opacity-100 transition-all duration-700 translate-y-[-20%]
 }
 
 /* --------------------Partners------------------- */
@@ -341,13 +350,22 @@
     @apply mx-auto py-[2rem]
 }
 
+/* --------------Arrow up------------ */
+.arrow{
+    @apply fixed bottom-3 right-3 lg:bottom-4 lg:right-[5rem] bg-light text-primary rounded-full  
+    border-[1px] border-primary hover:bg-primary hover:text-light hover:border-light transition
+    duration-300
+}
+.arrow i{
+    @apply text-[1.5rem] lg:text-[2rem] py-[.5rem] px-[.7rem] lg:py-[1.1rem] lg:px-[1.3rem] 
+}
 
 
 
 
 }
 
-
+/* ----------------------SLIDER-------------------- */
 .tns-nav{
     @apply
     z-[10] flex justify-center items-center
@@ -364,6 +382,7 @@
 .tns-nav button.tns-nav-active{
     @apply bg-pink-600
 }
+
 
 @layer base {
     @font-face {
@@ -397,24 +416,21 @@
 
 @layer utilities{
     .btn{
-        @apply inline-block py-[.8rem] px-[1.5rem] rounded-full border-transparent border-[1px]
-        hover:scale-[1]
+        @apply inline-block py-[.8rem] px-[1.4rem] rounded-full border-transparent border-[1px]
+        
     }
     .btn.bg--primary{
         @apply text-light hover:bg-transparent hover:text-primary hover:border-primary bg-primary
-        transition-all duration-300
+        transition duration-300 
     }
     .btn.bg--transparent{
         @apply text-dark border-primary hover:border-transparent hover:bg-gray-300 hover:scale-95
-        transition-all duration-300
+        transition duration-300
     }
     .btn.bg--light{
         @apply text-light border-light hover:text-primary hover:border-transparent hover:bg-light hover:scale-95
-        transition-all duration-300
+        transition duration-300
     }
 
-
-    
-    
-    
 }
+

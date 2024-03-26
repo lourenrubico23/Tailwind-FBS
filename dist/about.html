@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,10 +38,13 @@
                         <li><a href="">PAYMENT</a></li>
                     </ul>
                 </div>
-                <div class="toggle__menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="toggle__menu ">
+                    <span class="first"></span>
+                    <div class="inner relative">
+                        <span class="absolute"></span>
+                        <span></span>   
+                    </div>
+                    <span class="second"></span>
                 </div>
             </div>
         </div>
@@ -49,8 +52,9 @@
     <!-- HEADER ENDS -->
 
      <!-- BANNER STARTS -->
-     <section class="banner bg-Banner  bg-no-repeat bg-right-top">
+     <section class="banner relative  bg-no-repeat bg-right-top">
         <div class="container">
+            <img class="absolute animate-transition  lg:w-[120%] lg:h-[120%]" src="./img/home/bg3.svg" alt="">
             <div class="banner__wrapper">
                 <div class="banner__left" data-aos="fade-up"
                 data-aos-duration="1000">
@@ -149,7 +153,7 @@
                 <div class="team__img">
                     <div class="jhonny" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
+                    data-aos-delay="200"
                     data-aos-offset="0">
                         <div class="name">
                             <h5>Jhonny Dichoso</h5>
@@ -159,7 +163,7 @@
                     </div>
                     <div class="jeffrey" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
+                    data-aos-delay="200"
                     data-aos-offset="0">
                         <div class="name">
                             <h5>Jeffrey Pessina</h5>
@@ -169,7 +173,7 @@
                     </div>
                     <div class="rhoda" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="400"
+                    data-aos-delay="300"
                     data-aos-offset="0">
                         <div class="name">
                             <h5>Rhoda Beloso</h5>
@@ -179,7 +183,7 @@
                     </div>
                     <div class="bhea" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="400"
+                    data-aos-delay="300"
                     data-aos-offset="0">
                         <div class="name">
                             <h5>Bhea Del Monte</h5>
@@ -189,7 +193,7 @@
                     </div>
                     <div class="patrick" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="500"
+                    data-aos-delay="400"
                     data-aos-offset="0">
                         <div class="name">
                             <h5>Patrick Reyes</h5>
@@ -199,7 +203,7 @@
                     </div>
                     <div class="ralph" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="500"
+                    data-aos-delay="400"
                     data-aos-offset="0">
                         <div class="name">
                             <h5>Ralph Acoba</h5>
@@ -209,7 +213,7 @@
                     </div>
                     <div class="michael" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="600"
+                    data-aos-delay="500"
                     data-aos-offset="0">
                         <div class="name">
                             <h5>Michael De Juses</h5>
@@ -298,6 +302,14 @@
         </div>
     </footer>
     <!-- FOOTER ENDS -->
+
+
+<!-- ARROW UP STARTS -->
+<div class="arrow">
+    <button onclick="scrollToTop()"  class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+<!-- ARROW UP ENDS -->
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body id="header">
     <!-- HEADER STARTS -->
-    <header class="header">
+    <header  class="header">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__desk">
@@ -37,10 +37,13 @@
                         <li><a href="">PAYMENT</a></li>
                     </ul>
                 </div>
-                <div class="toggle__menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="toggle__menu relative">
+                    <span class="first"></span>
+                    <div class="inner">
+                        <span class="absolute"></span>
+                        <span></span>   
+                    </div>
+                    <span class="second"></span>
                 </div>
             </div>
         </div>
@@ -48,9 +51,10 @@
     <!-- HEADER ENDS -->
 
     <!-- BANNER STARTS -->
-    <section class="banner bg-Banner bg-no-repeat bg-right-top">
+    <section class="banner relative bg-no-repeat bg-right-top">
         <div class="container">
-            <div class="banner__wrapper">
+            <img class="absolute animate-transition w-full h-full lg:w-[120%] lg:h-[120%]" src="./img/home/bg3.svg" alt="">
+            <div class="banner__wrapper ">
                 <div class="banner__left" data-aos="fade-up"
                 data-aos-duration="1000">
                     <div class="banner__title">
@@ -357,6 +361,16 @@
     </footer>
     <!-- FOOTER ENDS -->
 
+    <!-- ARROW UP STARTS -->
+    <div class="arrow">
+        <button onclick="scrollToTop()" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <!-- ARROW UP ENDS -->
+
+
+    
+
+    <!-- Slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
    <script>
     
@@ -373,7 +387,9 @@
      
    </script> 
    
+   <!-- Animation -->
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
 
         document.addEventListener('aos:in', ({ detail }) => {
@@ -385,6 +401,8 @@ document.addEventListener('aos:out', ({ detail }) => {
 });
       AOS.init();
     </script>
+
+
     <script src="./js/script.js"></script>
     
 </body>
